@@ -22,9 +22,11 @@ rule blast:
         fasta="inputs/{sample}.fasta",
     output:
         blast_output="{sample}.blast_results.tsv"
+    params:
+        num_threads=8
     conda:
         "envs/blast.yaml"
     shell:
         """
-        blastn -db {DB} -query {input.fasta} -out {output.blast_output} -outfmt 6 -max_target_seqs 5;
+        blastn -db {DB} -query {input.fasta} -out {output.blast_output} -outfmt 6 -max_target_seqs 5 -num_threads {params.num_threads};
         """
