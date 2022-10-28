@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased]
 
+## [0.99.0] - 2022-10-28
+### Added
+- Snakemake pipeline for QC troublesome reads
+
 ## [0.2.0] - 2021-1-04
 ### Added
 - Implemented chimeric eclip qc (chimericqc)
